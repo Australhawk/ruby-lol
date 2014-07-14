@@ -22,7 +22,7 @@ module Lol
     # @return [Array]
     # TODO: Change name to entries?
     def get_entries summoner_id
-      perform_request(api_url("league/by-summoner/#{summoner_id}/entry")).map { |e| League.new e[1]}
+      perform_request(api_url("league/by-summoner/#{summoner_id}/entry")).map { |e| League.new e.first}
     end
 
     # Retrieves leagues data for team
